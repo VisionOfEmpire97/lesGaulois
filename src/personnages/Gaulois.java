@@ -1,6 +1,5 @@
 package personnages;
 
-
 public class Gaulois {
 	private String nom;
 	private int force;
@@ -31,11 +30,12 @@ public class Gaulois {
 		romain.recevoirCoup(force / 3);
 		}
 	
-//	public String toString() {
-//		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
-//	}
+	public String toString() {
+		return "Gaulois [nom = " + nom + ", force  = " + force + ", effetPotion = " + 
+				effetPotion + "]";
+	}
 	
-	public static void name(String[] args) {
+	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois ("Astérix", 8);
 		System.out.println(asterix);
 	}
