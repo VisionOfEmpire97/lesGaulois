@@ -27,9 +27,14 @@ public class Romain {
 	public void recevoirCoup(int forceCoup) {
 		force -= forceCoup;
 		if (force > 0) {
-			parler("Aïe");
+			parler("AÃ¯e");
 		} else {
 			parler("J'abandonne...");
 		}
+	}
+	public static void main(String[]args) {
+		Romain brutus = new Romain("Brutus", 3);
+		System.out.println(brutus);
+		//TODO terminer le main 
 	}
 }
