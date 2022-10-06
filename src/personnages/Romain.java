@@ -17,11 +17,11 @@ public class Romain {
 	}
 	
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "<<" + texte + ">>");
+		System.out.println(prendreParole() + "<< " + texte + " >>");
 	}
 
 	private String prendreParole() {
-		return "Le romain" + nom + ":";
+		return "Le romain " + nom + ":";
 	}
 	
 	public void recevoirCoup(int forceCoup) {
@@ -33,8 +33,10 @@ public class Romain {
 		}
 	}
 	public static void main(String[]args) {
-		Romain brutus = new Romain("Brutus", 3);
-		System.out.println(brutus);
-		//TODO terminer le main 
+		Romain minus = new Romain("Minus", 6);
+		System.out.println(minus);
+		minus.parler("UN GAU... UN GAUGAU...");
+		minus.recevoirCoup(5);
+		minus.recevoirCoup(7);
 	}
 }
