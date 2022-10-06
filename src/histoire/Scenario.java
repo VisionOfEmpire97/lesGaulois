@@ -1,9 +1,14 @@
 package histoire;
 
+import personnages.Gaulois;
+import personnages.Romain;
+
 public class Scenario {
 
 	public static void main(String[] args) {
-		while(Romain.minus)
+		Gaulois asterix = new Gaulois ("Astérix", 8);
+		Romain minus = new Romain("Minus", 6);
+		while 
 
 	}
 

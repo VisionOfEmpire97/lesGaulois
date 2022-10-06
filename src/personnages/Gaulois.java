@@ -1,7 +1,5 @@
 package personnages;
 
-import personnages.Romain;
-
 public class Gaulois {
 	private String nom;
 	private int force;
@@ -23,7 +21,7 @@ public class Gaulois {
 	
 
 	private String prendreParole() {
-		return "Le Gaulois " + nom + ":";
+		return "Le Gaulois " + nom + ": ";
 	}
 	
 	public void frapper(Romain romain) {
@@ -39,9 +37,10 @@ public class Gaulois {
 	
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois ("Astérix", 8);
+		Romain minus = new Romain("Minus", 6);
 		System.out.println(asterix);
 		asterix.parler("Bonjour à tous");
-		asterix.frapper(romain.getNom());
+		asterix.frapper(minus);
 	}
 
 }
