@@ -10,6 +10,11 @@ public class Romain {
 	}
 
 
+	public int getForce() {
+		return force;
+	}
+
+
 	public Romain(String nom, int force) {
 		super();
 		this.nom = nom;
