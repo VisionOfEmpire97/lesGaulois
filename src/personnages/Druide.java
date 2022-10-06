@@ -6,8 +6,7 @@ public class Druide {
 	private int effetPotionMin;
 	private int effetPotionMax;
 	private int forcePotion;
-	
-	
+		
 	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
 		super();
 		this.nom = nom;
@@ -22,7 +21,13 @@ public class Druide {
 	}
 	
 	public int preparerPotion(){
-		return genRandom();
+		Random rand = new Random();
+		int rValue = rand.nextInt(effetPotionMax);
+		if (rValue > 7) {
+			Druide.parler("J'ai préparé une super potion de force");
+		} else {
+			Druide.parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force");
+		}
 	}
 	
 	public void parler(String texte) {
@@ -33,7 +38,7 @@ public class Druide {
 		return "Le druide " + nom  + " : ";
 	}
 	
-	public Random();
+public static void main(String[] args) {
+	Druide panoramix = new Druide("Panoramix",5,10);
 	}
-
 }
