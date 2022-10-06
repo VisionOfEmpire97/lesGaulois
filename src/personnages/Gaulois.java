@@ -14,6 +14,13 @@ public class Gaulois {
 	public String getNom() {
 		return nom;
 	}
+	
+	/**
+	 * @return the effetPotion
+	 */
+	public int getEffetPotion() {
+		return effetPotion;
+	}
 
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "<< " + texte + " >>");
@@ -34,6 +41,7 @@ public class Gaulois {
 		effetPotion = forcePotion;
 	}
 	
+
 	public String toString() {
 		return "Gaulois [nom = " + nom + ", force  = " + force + ", effetPotion = " + 
 				effetPotion + "]";
