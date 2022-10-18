@@ -39,6 +39,8 @@ public class Gaulois {
 	
 	public void boirePotion(int forcePotion) {
 		effetPotion = forcePotion;
+		parler("Merci Druide, je sens que ma force est " + effetPotion + " fois décuplée.");
+
 	}
 	
 
@@ -53,9 +55,7 @@ public class Gaulois {
 		Druide panoramix = new Druide("Panoramix",5,10);
 		// System.out.println(asterix);
 		asterix.parler("Bonjour à tous");
-		panoramix.preparerPotion(panoramix);
 		asterix.boirePotion(panoramix.getForcePotion());
-		asterix.parler("Merci Druide, je sens que ma force est " + asterix.effetPotion + " fois décuplée.");
 		asterix.frapper(minus);
 	}
 
