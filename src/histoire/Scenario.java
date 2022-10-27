@@ -13,6 +13,8 @@ public class Scenario {
 		obelix.parler("Par Bélénos, ce n'est pas juste!");
 		asterix.boirePotion(panoramix.getForcePotion());
 		asterix.parler("Bonjour à tous");
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.BOUCLIER);
 		minus.parler("UN GAU... UN GAUGAU...");
 		while (minus.getForce() > 0){  //attention on est sur des int
 			asterix.frapper(minus);    //si la force est < 3 à l'init on a une boucle infinie

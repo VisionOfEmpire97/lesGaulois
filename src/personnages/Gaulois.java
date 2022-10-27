@@ -3,8 +3,9 @@ package personnages;
 public class Gaulois {
 	private String nom;
 	private int effetPotion = 1;
-	private int force, nb_trophees;
-	private Equipement trophees[] = new Equipement[100];
+	private int force;
+	private int nbtrophees;
+	private Equipement[] trophees = new Equipement[100];
 	
 	public Gaulois(String nom, int force) {
 		super();
@@ -27,29 +28,16 @@ public class Gaulois {
 		System.out.println(prendreParole() + "<< " + texte + " >>");
 	}
 	
-
-//	private String prendreParole() {
-//		return "Le Gaulois " + nom + ": ";
-//	}
-	
 	private String prendreParole() {
-		String texte = "Le gaulois " + nom + " : ";
-		return texte;
+		return "Le gaulois " + nom + " : ";
 		}
-	
-//	public void frapper(Romain romain) {
-//		System.out.println(nom + " envoie un grand coup dans la mâchoire de "
-//		+ romain.getNom());
-//		romain.recevoirCoup(force / 3 * effetPotion);
-//		}
 	
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		Equipement trophees[] = romain.recevoirCoup((force / 3) * effetPotion);
-		for (int i = 0; trophees != null && i < trophees.length; i++, nb_trophees++) {
-			this.trophees[nb_trophees] = trophees[i];
+		Equipement[] armureDetruite = romain.recevoirCoup((force / 3) * effetPotion);
+		for (int i = 0; armureDetruite != null && i < armureDetruite.length; i++, nbtrophees++) {
+			this.trophees[nbtrophees] = armureDetruite[i];
 		}
-		return;
 	}
 	
 	public void boirePotion(int forcePotion) {
@@ -58,16 +46,11 @@ public class Gaulois {
 
 	}
 	
-
-	public String toString() {
-		return "Gaulois [nom = " + nom + ", force  = " + force + ", effetPotion = " + 
-				effetPotion + "]";
-	}
-	
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois ("Astérix", 8);
 		Romain minus = new Romain("Minus", 6);
 		Druide panoramix = new Druide("Panoramix",5,10);
+		panoramix.preparerPotion();
 		// System.out.println(asterix);
 		asterix.parler("Bonjour à tous");
 		asterix.boirePotion(panoramix.getForcePotion());
